@@ -47,7 +47,7 @@ exports.signup=async(req,res)=>{
     catch(err){
         return res.status(400).json({
             success:false,
-            message:err.message
+            message:"Problem in signing up and this is in user_auth.js controller line no 34",
         });
     }
 }
@@ -87,9 +87,10 @@ exports.login=async(req,res)=>{
         
     }
     catch(err){
+        console.log("Error in login")
         return res.status(400).json({
             success:false,
-            message:err.message
+            message:"Problem in login and this is in user_auth.js controller line no 68",
         });
     }
 }

@@ -19,7 +19,7 @@ function App() {
       <div className="mx-auto min-h-screen">
         <Navbar/>
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/cart" element={<Cart />}/>
           <Route path="/placeorder" element={<PlaceOrder/>}/>
           <Route path="/verify" element={<Verify />} />

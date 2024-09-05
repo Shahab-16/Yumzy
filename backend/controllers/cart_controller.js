@@ -20,7 +20,7 @@ exports.addToCart=async(req,res)=>{
     catch(err){
         return res.status(400).json({
             success:false,
-            message:err.message
+            message:"Add to Cart failed and this is in cart_controller.js controller line no 23"  
         })
     }
 };
@@ -42,7 +42,7 @@ exports.removeFromCart=async(req,res)=>{
     catch(err){
         return res.status(400).json({
             success:false,
-            message:err.message
+            message:"Remove from Cart failed and this is in cart_controller.js controller line no 47"
         })
     }
 };
@@ -59,7 +59,7 @@ exports.getCartItems=async(req,res)=>{
     catch(err){
         return res.status(400).json({
             success:false,
-            message:err.message
+            message:"Get Cart Items failed and this is in cart_controller.js controller line no 64"
         })
     }
 };

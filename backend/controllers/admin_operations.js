@@ -22,7 +22,7 @@ exports.addFood = async (req, res) => {
     } catch (err) {
         res.status(400).json({
             success: false,
-            message: err.message
+            message: "problem in adding food and code is in admin_operations.js controller line no 26"
         });
     }
 };
@@ -37,7 +37,7 @@ exports.getAllFood = async (req, res) => {
     } catch (err) {
         res.status(400).json({
             success: false,
-            message: err.message
+            message: "problem in getting all food and code is in admin_operations.js controller line no 39"
         });
     }
 };
@@ -61,7 +61,7 @@ exports.removeFood = async (req, res) => {
                 console.error('Error deleting file:', err);
                 return res.status(500).json({
                     success: false,
-                    message: 'Failed to delete image file'
+                    message: 'Failed to delete image file in localDisk and code is in admin_operations.js controller line no 64'
                 });
             }
 
@@ -74,14 +74,14 @@ exports.removeFood = async (req, res) => {
             } catch (err) {
                 res.status(500).json({
                     success: false,
-                    message: 'Failed to delete food item'
+                    message: 'Failed to delete food item and code is in admin_operations.js controller line no 75'
                 });
             }
         });
     } catch (err) {
         res.status(400).json({
             success: false,
-            message: err.message
+            message:"Failed to remove food and code is in admin_operations.js controller line no 81"
         });
     }
 };

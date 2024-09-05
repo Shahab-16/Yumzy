@@ -19,8 +19,8 @@ app.use('/api/v1/user',user_routes);
 app.use('/api/v1/cart',cart_routes);
 app.use('/api/v1/order',order_route);
 
-app.listen(5000,()=>{
-    console.log('listening on port 5000');
+app.listen(process.env.PORT,()=>{
+    console.log(`listening on port ${process.env.PORT}`);
 })
 
 

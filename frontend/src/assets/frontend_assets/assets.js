@@ -61,6 +61,13 @@ import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import cross from './cross.png'
 
+import biriyani from './Biriyani.jpg'
+import chicken_menu from './Chicken_Menu.png'
+import starters_menu from './Starters.png'
+import paneer_menu from './Paneer_Menu.png'
+import bread_menu from './Breads.png'
+import drinks_menu from './Drinks.png'
+
 export const assets = {
     logo,
     basket_icon,
@@ -86,7 +93,7 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
+        menu_name: "Salads",
         menu_image: menu_1
     },
     {
@@ -94,11 +101,11 @@ export const menu_list = [
         menu_image: menu_2
     },
     {
-        menu_name: "Deserts",
+        menu_name: "Desserts",
         menu_image: menu_3
     },
     {
-        menu_name: "Sandwich",
+        menu_name: "Sandwiches",
         menu_image: menu_4
     },
     {
@@ -106,21 +113,44 @@ export const menu_list = [
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        menu_name: "Vegetarian Delights", 
         menu_image: menu_6
     },
     {
-        menu_name: "Pasta",
+        menu_name: "Non-Vegetarian Specialties",
         menu_image: menu_7
     },
     {
-        menu_name: "Noodles",
+        menu_name: "Chineese",
         menu_image: menu_8
     },
     {
         menu_name: "Biriyani",
-        menu_image: menu_8
+        menu_image: biriyani
     },
+    {
+        menu_name: "Chicken Dishes",
+        menu_image: chicken_menu
+    },
+    
+    {
+        menu_name: "Starters",
+        menu_image: starters_menu
+    },
+    {
+        menu_name: "Drinks",
+        menu_image: drinks_menu
+    },
+    {
+        menu_name: "Breads",
+        menu_image: bread_menu
+    },
+    {
+        menu_name: "Paneer",
+        menu_image: paneer_menu
+    }
+
+
     
 ]
 

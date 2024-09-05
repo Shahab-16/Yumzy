@@ -109,7 +109,7 @@ const Navbar = () => {
                   />
                   <p>Logout</p>
                 </li>
-                <li className="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer">
+                <li onClick={() => navigate("/myorders")} className="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer">
                   <img
                     src={assets.bag_icon}
                     alt="bag_icon"

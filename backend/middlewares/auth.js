@@ -17,7 +17,7 @@ const auth=async(req,res,next)=>{
     catch(err){
         return res.status(400).json({
             success:false,
-            message:'Please provide valid token'
+            message:'Please provide valid token and code is in auth.js middleware line no 20'
         })
     }
 }

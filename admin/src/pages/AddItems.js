@@ -47,7 +47,7 @@ const AddItems = ({url}) => {
   }
 
   return (
-    <div className='px-[4rem] pt-[1rem] w-[80%]'>
+    <div className='px-[4rem] pt-[1rem] w-[70%]'>
         <form className='flex flex-col gap-4' onSubmit={submitHandler}>
           <div>
             <p>Upload Image</p>
@@ -70,13 +70,20 @@ const AddItems = ({url}) => {
           <div className='flex gap-2'>
             <label htmlFor='productCategory'>
             <p>Product Category</p><br></br>
-              <select onChange={onChangeHandler} id="food" name="food" required className='border-2 border-[#241919] rounded-sm p-[7px] bg-slate-50'>
-                <option value="salad">Salad</option>
-                <option value="roll">Roll</option>
-                <option value="sandwich">Sandwich</option>
-                <option value="biriyani">Biriyani</option>
-                <option value="cake">Cake</option>
-                <option value="chicken_dishes">Chicken Dishes</option>
+              <select onChange={onChangeHandler} id="category" name="category" required className='border-2 border-[#241919] rounded-sm p-[7px] bg-slate-50'>
+                <option value="Starters">Starters</option>
+                <option value="Vegetarian Delights">Vegetarian Delights</option>
+                <option value="Non-Vegetarian Specialties">Non-Vegetarian Specialties</option>
+                <option value="Chicken Dishes">Chicken Dishes</option>
+                <option value="Paneer Dishes">Paneer Dishes</option>
+                <option value="Chicken Dishes">Chicken Dishes</option>
+                <option value="Salads">Salads</option>
+                <option value="Sandwiches">Sandwiches</option>
+                <option value="Drinks">Drinks</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Breads">Breads</option>
+                <option value="Rolls">Rolls</option>
+                <option value="Chineese">Chineese</option>
               </select>
             </label>
 

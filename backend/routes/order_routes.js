@@ -3,14 +3,18 @@ const orderRouter=express.Router();
 const auth =require('../middlewares/auth.js');
 
 
-const {placeOrder,verifyPayment,userOrders}=require('../controllers/ordre_controller.js');
+const {placeOrder,verifyOrder,userOrders,getOrdersAdmin,updateStatus}=require('../controllers/ordre_controller.js');
 
 
 orderRouter.post('/place',auth,placeOrder);
 
-orderRouter.post('/verify',auth,verifyPayment);
+orderRouter.post('/verify',auth,verifyOrder);
 
 orderRouter.post('/userorders',auth,userOrders);
+
+orderRouter.get('/list',getOrdersAdmin)
+
+orderRouter.post('/status',updateStatus)
 
 
 

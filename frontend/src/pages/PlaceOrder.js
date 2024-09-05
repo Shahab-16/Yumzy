@@ -1,19 +1,17 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import axios from "axios";
 
 const PlaceOrder = () => {
   const {
-    addToCart,
     url,
     totalCartAmount,
     cartItems,
     token,
     food_list,
-    setFoodList,
   } = useContext(StoreContext);
   const [data, setData] = useState({
     firstName: "",
@@ -55,17 +53,17 @@ const PlaceOrder = () => {
       const { session_url } = response.data;
       window.location.replace(session_url);
     } else {
+      console.log("Session problem in PlaceOrder page line 56")
       alert("Error");
     }
   };
 
- const navigate = useNavigate();
+  const navigate = useNavigate();
   useEffect(() => {
-    if (token) {
-      navigate("/cart")
-    }
-    else if(totalCartAmount===0){
-      navigate('/cart')
+    if (!token) {
+      navigate("/cart");
+    } else if (totalCartAmount === 0) {
+      navigate("/cart");
     }
   }, [token]);
 
