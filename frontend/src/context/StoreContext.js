@@ -9,7 +9,7 @@ const StoreContextProvider=(props)=>{
 
     const [cartItems,setCartItems]=useState({});
     const [login,setlogin]=useState(false);
-    const url='http://localhost:5000';
+    const url='https://yumzy-backend.onrender.com';
     const [token,setToken]=useState("");
     const [food_list,setFoodList]=useState([]);
 
