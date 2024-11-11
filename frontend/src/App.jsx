@@ -16,7 +16,7 @@ function App() {
   return (
     <>
     {login ? (<Login/>) : (<></>)}
-      <div className="mx-auto min-h-screen">
+      <div className="min-h-screen">
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}/>

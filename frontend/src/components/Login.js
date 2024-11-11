@@ -43,7 +43,7 @@ const Login = () => {
     console.log(data);
   });
   return (
-    <div className="bg-[#00000090] absolute w-[100%] h-[100%]">
+    <div className="bg-[#000000c0] absolute w-full h-full flex justify-center items-center min-h-screen">
       <form
         onSubmit={onSubmit}
         className="w-[400px] h-[550px] rounded-lg bg-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[2rem] flex flex-col gap-[4px]"

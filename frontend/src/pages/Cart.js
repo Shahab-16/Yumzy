@@ -52,10 +52,10 @@ const Cart = () => {
           })}
         </div>
 
-        <div className="flex justify-between">
-
-          <div className="flex flex-col gap-[0.5rem] w-[500px]">
-            <p className="text-3xl font-semibold">Cart Totals</p>
+        <div className="flex flex-col md:flex-row justify-between gap-6">
+          {/* Cart Totals */}
+          <div className="flex flex-col gap-[0.5rem] w-full md:w-[500px]">
+            <p className="text-2xl md:text-3xl font-semibold">Cart Totals</p>
             <div className="flex flex-col">
               <div className="flex justify-between">
                 <p>Subtotal</p>
@@ -67,7 +67,7 @@ const Cart = () => {
             <div className="flex flex-col mt-[1rem]">
               <div className="flex justify-between">
                 <p>Delivery Fee</p>
-                <p>${totalCartAmount()>0?2:0}</p>
+                <p>${totalCartAmount() > 0 ? 2 : 0}</p>
               </div>
               <div className="h-[2px] w-full bg-gray-600 mx-auto"></div>
             </div>
@@ -75,19 +75,30 @@ const Cart = () => {
             <div className="flex flex-col mb-[1rem]">
               <div className="flex justify-between">
                 <p className="font-semibold">Total</p>
-                <p>${totalCartAmount()>0?totalCartAmount()+2:0}</p>
+                <p>${totalCartAmount() > 0 ? totalCartAmount() + 2 : 0}</p>
               </div>
             </div>
 
-            <button onClick={()=>navigate('/placeorder')} className="bg-yellow-600 text-white text-lg font-semibold w-[350px] h-[50px] text-center rounded-lg">Proceed to Checkout</button>
-
+            <button
+              onClick={() => navigate("/placeorder")}
+              className="bg-yellow-600 text-white text-lg font-semibold w-full md:w-[350px] h-[50px] text-center rounded-lg"
+            >
+              Proceed to Checkout
+            </button>
           </div>
 
-          <div className="flex flex-col w-[400px] gap-3">
-            <p>If you have a promo code.Enter it here</p>
+          {/* Promo Code */}
+          <div className="flex flex-col w-full md:w-[400px] gap-3">
+            <p>If you have a promo code, enter it here:</p>
             <div className="flex gap-[1px]">
-              <input type="text" placeholder='Enter promo code' className="bg-gray-300 border-hidden h-[35px] w-[300px] rounded-lg placeholder-black placeholder-opacity-50 text-center"/>
-              <button className="bg-black text-white font-semibold w-[90px]  rounded-lg">Submit</button>
+              <input
+                type="text"
+                placeholder="Enter promo code"
+                className="bg-gray-300 border-none h-[35px] w-full md:w-[300px] rounded-lg placeholder-black placeholder-opacity-50 text-center"
+              />
+              <button className="bg-black text-white font-semibold w-[90px] rounded-lg">
+                Submit
+              </button>
             </div>
           </div>
         </div>

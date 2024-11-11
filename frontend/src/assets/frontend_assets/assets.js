@@ -67,7 +67,8 @@ import starters_menu from './Starters.png'
 import paneer_menu from './Paneer_Menu.png'
 import bread_menu from './Breads.png'
 import drinks_menu from './Drinks.png'
-
+import BackgroundImage from './restaurantBI.jpg'
+import headerBI from './headerBI.jpg'
 export const assets = {
     logo,
     basket_icon,
@@ -88,7 +89,10 @@ export const assets = {
     logout_icon,
     bag_icon,
     parcel_icon,
-    cross
+    cross,
+    BackgroundImage,
+    headerBI
+
 }
 
 export const menu_list = [

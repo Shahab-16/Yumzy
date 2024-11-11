@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { assets } from "../assets/frontend_assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { StoreContext } from "../context/StoreContext";
-import { useContext } from "react";
+
 const Navbar = () => {
   const [downbar, setdownbar] = useState("Home");
   const { login, setlogin, token, setToken } = useContext(StoreContext);
@@ -21,14 +20,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-[1280px] mx-auto flex justify-between items-center p-4">
+    <div className="navbar-container max-w-[1280px] mx-auto flex justify-between items-center p-4 relative">
       <img
         onClick={() => navigate("/")}
         src={assets.logo}
         alt="logo"
         className="w-[150px] h-[50px] cursor-pointer"
       />
-      <ul className="flex items-center gap-6">
+      <ul className="nav-links flex items-center gap-6">
         <NavLink to={"/"}>
           <li
             onClick={() => setdownbar("Home")}
@@ -71,12 +70,7 @@ const Navbar = () => {
         </a>
       </ul>
 
-      <div className="flex items-center gap-6">
-        <img
-          src={assets.search_icon}
-          alt="search_icon"
-          className="w-[20px] h-[20px]"
-        />
+      <div className="flex items-center gap-6 relative RightContent">
         <div className="relative">
           <img
             onClick={() => navigate("/cart")}
@@ -94,10 +88,10 @@ const Navbar = () => {
               src={assets.profile_icon}
               alt="user_icon"
               className="w-[25px] h-[25px] cursor-pointer"
-              onClick={toggleMenuVisibility} // Toggle menu visibility on click
+              onClick={toggleMenuVisibility}
             />
-            {isMenuVisible && ( // Conditionally render the ul based on state
-              <ul className="absolute top-[35px] left-[-35px] bg-white border w-[120px] border-gray-300 rounded-lg shadow-lg">
+            {isMenuVisible && (
+              <ul className="DropDownContainer absolute top-[35px] left-[-35px] bg-white border w-[120px] border-gray-300 rounded-lg shadow-lg">
                 <li
                   onClick={logout}
                   className="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer"
@@ -109,7 +103,10 @@ const Navbar = () => {
                   />
                   <p>Logout</p>
                 </li>
-                <li onClick={() => navigate("/myorders")} className="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer">
+                <li
+                  onClick={() => navigate("/myorders")}
+                  className="flex items-center gap-2 p-2 hover:bg-gray-100 cursor-pointer"
+                >
                   <img
                     src={assets.bag_icon}
                     alt="bag_icon"

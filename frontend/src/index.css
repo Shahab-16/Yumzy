@@ -62,3 +62,35 @@ input[type="number"] {
 }
 
 
+
+
+
+
+/* Hide menu items on screens smaller than 768px */
+@media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hides the menu items */
+    }
+    .navbar-container {
+      display: flex; /* Adjusts the layout for small screens */
+      align-items: center;
+    }
+  }
+
+  @media(max-width:1400px){
+    .RightContent {
+        padding-right: 40px;
+    }
+    .DropDownContainer {
+        width: 100px;
+    }
+  }
+
+
+  body.overflow-hidden {
+    overflow-y: hidden;
+}
+  
+
+
+
